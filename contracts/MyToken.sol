@@ -9,8 +9,13 @@ contract MyToken{
     string public name="MyToken";
     string public symbol="MT";
     string public standard="MyToken New";
-    
-    mapping(address=>uint) public balanceOf;
+
+    event Transfer(
+       address indexed _from,
+       address indexed _to,
+       uint256 _value
+    );
+   mapping(address=>uint) public balanceOf;
 
     constructor(uint _initialSupply) public {
        balanceOf[msg.sender]=_initialSupply;
@@ -20,4 +25,15 @@ contract MyToken{
     function totalSupply() public view returns(uint){
         return noTokens;
      } 
+
+     function transfer(address _to,uint256 _value) public returns(bool success){
+         require(balanceOf[msg.sender]>= _value);
+         balanceOf[msg.sender]=balanceOf[msg.sender] - _value;
+         balanceOf[_to]=balanceOf[_to]+_value;
+        //emmiting Transfer event
+         emit Transfer(msg.sender, _to, _value);
+
+         return true;
+     }
+
 }
