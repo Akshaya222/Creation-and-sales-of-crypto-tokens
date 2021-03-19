@@ -1,6 +1,21 @@
 const MyToken = artifacts.require("MyToken");
 
 contract("MyToken",function(accounts){
+    it("Initializes the contract with correct values",function(){
+        return MyToken.deployed().then(function(instance){ 
+       tokenInstance=instance;
+       return tokenInstance.name();
+    }).then(function(name){
+        assert.equal(name,"MyToken","checks the name of token is MyToken");
+        return tokenInstance.symbol();
+    }).then(function(symbol){
+        assert.equal(symbol,"MT","checks the symbol of token is MyToken");
+        return tokenInstance.standard();
+    }).then(function(standard){
+        assert.equal(standard,"MyToken New","checks the standard value is MYToken New")
+    })
+  })
+
     it("Initializing the total supply on deployment",function(){
         return MyToken.deployed().then(function(instance){
             tokenInstance=instance;

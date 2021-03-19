@@ -6,7 +6,10 @@ contract MyToken{
     //initialize inside constructor, constructor runs only once when the smart contract is deployed
     //read the number the tokens
     uint noTokens;
-
+    string public name="MyToken";
+    string public symbol="MT";
+    string public standard="MyToken New";
+    
     mapping(address=>uint) public balanceOf;
 
     constructor(uint _initialSupply) public {
@@ -16,6 +19,5 @@ contract MyToken{
 
     function totalSupply() public view returns(uint){
         return noTokens;
-     }
-    
+     } 
 }
