@@ -60,8 +60,7 @@ contract MyToken{
    require(allowance[_sender][msg.sender]>=_amount,"Cannot transfer more than approved amount");
      //change the balance
    balanceOf[_sender]-=_amount;
-   balanceOf[_recipient]+=_amount;
-   //update the allowance
+   balanceOf[_recipient]+=_amount;  //update the allowance
    allowance[_sender][msg.sender]-=_amount;
     //transfer event
     emit  Transfer(_sender, _recipient, _amount);
