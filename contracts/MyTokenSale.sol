@@ -16,7 +16,7 @@ contract MyTokenSale{
 
     constructor(MyToken _tokenContract,uint _tokenPrice) public {
         //Assign an admin
-           admin=msg.sender;
+          admin=msg.sender;
         //token contract
         tokenContract=_tokenContract;
         //token price

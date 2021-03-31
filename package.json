@@ -1,0 +1,26 @@
+{
+  "name": "token-sale",
+  "version": "1.0.0",
+  "description": "token sale ICO",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akshaya222/Creation-and-sales-of-cryptocurrency.git"
+  },
+  "author": "Akshaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akshaya222/Creation-and-sales-of-cryptocurrency/issues"
+  },
+  "homepage": "https://github.com/Akshaya222/Creation-and-sales-of-cryptocurrency#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
