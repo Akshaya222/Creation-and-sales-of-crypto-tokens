@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div style="min-height: 95vh;min-width: 100wh;display:flex;align-items: center;
+    justify-content: center;">
+        <div class="container-fluid" style="background-color:#b4aee8;width: 80%;height:80%; margin: 50px 0px;">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div>
+                    <div class="tokenDetailsBox">
+                         <h1>The Token Sale is live!</h1>
+                         <div class="tokenDetails">
+                             <div class="detail">
+                                Name:  <strong id="tokenName"></strong><br>
+                             </div>
+                             <div class="detail">
+                                Symbol:  <strong id="tokenSymbol"></strong><br>
+                             </div>
+                             <div class="detail">
+                                Blockchain:  <strong> Ethereum ERC20</strong><br>
+                             </div>
+                             <div class="detail">
+                                Price:  <strong class="token-price"></strong>Ether<br>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                 <div>
+                    <div class="timerBox">
+                        <h2>TOKEN SALE</h2>
+                        <small>ends in</small>
+                        <div class="timer">
+                            <div class="time">
+                                <span id="days" class="timeText"></span>
+                                <small>days</small>
+                             </div>
+                             <div class="time">
+                                <span id="hours" class="timeText"></span>
+                                <small>hours</small>
+                             </div>
+                             <div class="time">
+                                <span id="minutes" class="timeText"></span>
+                                <small>mins</small>
+                             </div>
+                             <div class="time">
+                                <span id="seconds" class="timeText"></span>
+                                <small>secs</small>
+                             </div>
+                        </div>
+                        <button class="btn btn-lg btn-primary timer-btn" style="margin-top: 20px;">BUY NOW</button>
+                    </div> 
+                 </div> 
+              </div>
+            </div>
+            <div class="row" style="margin: 20px 0px;"></div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+                    <div style="margin-bottom:25px; display: flex;flex-direction: column;align-items: center;">
+                        <h4 style="color: white;">Hello  <span id="name" style="color: #000;"> </span></h4>
+                        <button class="btn btn-lg btn-primary dashboard-btn" onclick="showDashboard()">Dashboard</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 ">
+                    <form role="form" onsubmit="App.buyTokens(); return false;" style="margin: 15px 10px;">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="number" id="numberOfToken" class="form-control input-lg" name="number" value="1" min="1" pattern="[0-9]" required>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary btn-lg dashboard-btn">Buy</button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="progress" style="margin: 15px 10px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="background-color: #7868e6;"></div>
+                      </div>
+                      <div class="tokens-sold" style="color: white;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+                        <p><span id="tokens-sold"></span> &#47; <span id="total-tokens"></span> tokens sold</p>
+                        <p>Your address : <span id="accountAddress"></span></p>
+                    </div>
+                </div>           
+            </div>
+          </div>
+    </div>
+     <!-- neccesary cdns -->
+     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+     <script src=" https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/truffle-contract@4.0.31/dist/truffle-contract.min.js"></script>
+     <!-- neccessary cdns -->
+     <script src="./js/app.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/trans_dash.js"></script>
+</body>
+</html>

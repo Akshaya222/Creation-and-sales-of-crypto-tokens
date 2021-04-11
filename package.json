@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"lite-server"
+    "start": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Akshaya222/Creation-and-sales-of-cryptocurrency#readme",
   "dependencies": {
+    "ganache-cli": "^6.12.2",
     "lite-server": "^2.6.1"
   }
 }

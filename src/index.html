@@ -4,59 +4,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-   <title>Document</title>
+    <title>My Token Sale</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"
+  />
+  
+  <!-- custom stylesheet -->
+  <link rel="stylesheet" href="./css/login.css" />
+  <!-- Font Awesome -->
+  <script
+    src="https://kit.fontawesome.com/a385d09513.js"
+    crossorigin="anonymous"
+  ></script>
+  
+  <!-- Bootstrap Javascript -->
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous" 
+  ></script>
+  
 </head>
 <body>
-    <header>token sale</header>
-    <main>
-        <div class="container" style="width:650px;">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="text-center">DAPP TOKEN ICO SALE</h1>
-                    <hr/>
-                    <br/>
-                </div>
-                <div id="loader">
-                    <p class="text-center">Loading.....</p>
-                </div>
-                <div id="content" class="text-center">
-                    <p>
-                        Introducing "My Token (DAPP)!
-                        Token price is <span class="token-price"></span> Ether.
-                        You currently have <span class="dapp-balance">&nbsp;DAPP</span>
-                    </p>
-                    <br>
-                    <form role="form" onsubmit="App.buyTokens(); return false;">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input type="number" id="numberOfToken" class="form-control input-lg" name="number" value="1" min="1" pattern="[0-9]" required>
-                                <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-primary btn-lg">Buy Tokens</button>
-                                </span>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-info active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="tokens-sold">
-                          <p><span id="tokens-sold">000</span> &#47; <span id="total-tokens"></span> tokens sold</p>
-                      </div>
-                      <hr>
-                      <p>Your address : <span id="accountAddress"></span></p>
-                </div>
+    <section class="user-authentication">
+        <div class="user_options-container">
+          <div class="user_options-text">
+            <div class="user_options-unregistered">
+              <h2 class="user_unregistered-title">Don't have an account?</h2>
+              <p class="user_unregistered-text">Create your account to register for the token sale now!</p>
+              <button class="user_unregistered-signup" id="signup-button">Sign up</button>
             </div>
+      
+            <div class="user_options-registered">
+              <h2 class="user_registered-title">Have an account?</h2>
+              <p class="user_registered-text">Login to buy tokens!</p>
+              <button class="user_registered-login" id="login-button">Login</button>
+            </div>
+          </div>
+          
+          <div class="user_options-forms" id="user_options-forms">
+            <div class="user_forms-login">
+              <h2 class="forms_title">Login</h2>
+              <form class="forms_form">
+                <fieldset class="forms_fieldset">
+                  <div class="forms_field">
+                    <input type="email" placeholder="Email" class="forms_field-input"  id="loginEmail"   required autofocus />
+                  </div>
+                  <div class="forms_field">
+                    <input type="password" placeholder="Password" class="forms_field-input" id="loginPassword" required />
+                  </div>
+                </fieldset>
+                <div class="forms_buttons">
+                  <button type="button" class="forms_buttons-forgot" id="forget-button">Forgot password?</button>
+                  <button type="submit" class="forms_buttons-action" onclick="loginHandler(event)">Login</button>
+                              <a class="forms_buttons-mb-button" id="signup-button-mb">Sign up</a>
+                </div>
+              </form>
+            </div>
+            <div class="user_forms-signup">
+              <h2 class="forms_title">Sign Up</h2>
+              <form class="forms_form">
+                <fieldset class="forms_fieldset">
+                  <div class="forms_field">
+                    <input type="text" placeholder="Full Name" class="forms_field-input" id="registerName" required />
+                  </div>
+                  <div class="forms_field">
+                    <input type="email" placeholder="Email" class="forms_field-input" id="registerEmail" required />
+                  </div>
+                  <div class="forms_field">
+                    <input type="password" placeholder="Password" class="forms_field-input" id="registerPassword" required />
+                  </div>
+                </fieldset>
+                <div class="forms_buttons">
+                  <button type="submit" class="forms_buttons-action" onclick="registerHandler(event)">Sign up</button>
+                              <a class="forms_buttons-mb-button" id="login-button-mb">Login</a>
+                </div>
+              </form>
+            </div>
+                  <div class="user_forms-forgot">
+              <h2 class="forms_title">Forgot Password</h2>
+              <form class="forms_form">
+                <fieldset class="forms_fieldset">
+                  <div class="forms_field">
+                    <input type="email" placeholder="Email" class="forms_field-input" id="forgotEmail" required autofocus />
+                  </div>
+                </fieldset>
+                <div class="forms_buttons">
+                  <button type="submit" class="forms_buttons-action" onclick="forgotHandler(event)">Send reset link</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-    </main>
-    <footer></footer>
-    <!-- neccesary cdns -->
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
-    <script src=" https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/truffle-contract@4.0.31/dist/truffle-contract.min.js"></script>
-    <!-- neccessary cdns -->
-    <script src="./app.js"></script>
+      </section>
+      <script src="./js/login.js"></script>
+      <script src="./js/authentication.js"></script>
 </body>
-
 </html>

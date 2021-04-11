@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Dashboard Template</title>
+    <link rel="stylesheet" href="./css/trans_dash.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+
+  </head>
+  <body>
+      
+     
+      
+<input type="checkbox" id="check">
+<!--header area start-->
+<header>
+  <label for="check">
+    <i class="fas fa-bars" id="sidebar_btn"></i>
+  </label>
+  <div class="left_area">
+      <h3>MY TOKEN</h3>
+  </div>
+  <div class="right_area">
+    <a href="#" class="logout_btn" onclick="logoutHandler(event)">Logout</a>
+  </div>
+</header>
+<!--header area end-->
+<!--sidebar start-->
+<div class="mobile_nav">
+        <div class="nav_bar">
+          <img src="./img/user.jpeg" class="mobile_profile_image" alt="">
+          <i class="fa fa-bars nav_btn"></i>
+        </div>
+        <div class="mobile_nav_items">
+                <a href="dash.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+                <a href="transaction.html"><i class="fas fa-wallet"></i><span>Transactions</span></a>
+        </div>
+</div>
+            
+<div class="sidebar">
+  <div class="profile_info">
+    <img src="./img/user.jpeg" class="profile_image" alt="">
+    
+    <!--<p class="profile-rating">JOINED ON : <span>08/03/2021</span></p>-->
+</div>
+  <a href="sale.html"><i class="fas fa-home"></i><span>Home</span></a>   
+  <a href="dash.html"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+  <a href="transaction.html"><i class="fas fa-wallet"></i><span>Transactions</span></a>
+</div>
+
+<div class="content">
+        <div class="card">
+                <div class="profile-head">
+                        <h1>
+                            WELCOME BACK! </h1>
+                        <br>
+                        <a class="nav-link active">User Profile</a>
+                        <hr>
+            <div class="col-md-6">
+            <div class="tab-content profile-tab" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                <div class="col-md-6">
+                                    <br><br>
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="name"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="mail"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Address</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p id="accountAddress"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Token Owned</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p id="tokensOwned"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Balance Available</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <p><span id="balance"></span> Wei</p>
+                                    </div>
+                                </div>               
+                </div>  
+                
+                </div>
+
+            </div> 
+        </div>
+        </div>
+        </div>  
+        </div>
+</div>
+     
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+    </script>
+      <!-- neccesary cdns -->
+      <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+      <script src=" https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/truffle-contract@4.0.31/dist/truffle-contract.min.js"></script>
+      <script src="./js/trans_dash.js"></script>
+      <script src="./js/app.js"></script>
+      <script src="./js/authentication.js"></script>
+</body>
+</html>

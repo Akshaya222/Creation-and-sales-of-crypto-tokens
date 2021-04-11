@@ -1,0 +1,384 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url('../img/scott-webb-OxHPDs4WV8Y-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+
+  header{
+    z-index: 1;
+    position: fixed;
+    background: #342f38;
+    padding: 20px;
+    width: calc(100% - 0%);
+    top: 0;
+    height: 30px;
+  }
+  
+  .left_area h3{
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  .left_area span{
+    color: #c0bae5;
+  }
+  
+  .logout_btn{
+    padding: 5px;
+    background: #b4aee8;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    transition: 0.5s;
+    transition-property: background;
+  }
+  
+  .logout_btn:hover{
+    background: #7868e6;
+  }
+  
+  .sidebar {
+    z-index: 1;
+    top: 0;
+    background: linear-gradient(#7868e6,#b8b5ff,#e4fbff);
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: calc(100% - 9%);
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;
+  }
+
+  .profile_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sidebar .profile_info .profile_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar .profile_info h4{
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .profile_info p{
+    color: #fff;
+  }
+  .sidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+  }
+  
+  .sidebar a:hover{
+    color: mintcream;
+    background: #7868e6;
+    opacity: 0.5;
+  }
+  
+  .sidebar i{
+    padding-right: 10px;
+  }
+  
+  label #sidebar_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+  }
+  
+  label #sidebar_btn:hover{
+    color: #b4aee8;
+  }
+  
+  #check:checked ~ .sidebar{
+    left: -190px;
+  }
+  
+  #check:checked ~ .sidebar a span{
+    display: none;
+  }
+  
+  #check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 165px;
+    width: 100%;
+  }
+  
+  .content{
+    width: (100% - 250px);
+    margin-top: 60px;
+    padding: 20px;
+    margin-left: 250px;
+    background: #342f38;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    transition: 0.5s;
+  }
+  
+  #check:checked ~ .content{
+    margin-left: 60px;
+  }
+
+  #check:checked ~ .sidebar .profile_info{
+    display: none;
+  }
+
+  #check{
+    display: none;
+  }
+
+  .mobile_nav{
+    display: none;
+  }
+  
+  .content .card p{
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    opacity: 1;
+  }
+  
+  .content .card a{
+    color: #b4aee8;
+    font-size: 30px;
+    font-weight:300;
+    margin-bottom: 5%;
+}
+  
+
+  /* Responsive CSS */
+  
+  @media screen and (max-width: 780px){
+    .sidebar{
+      display: none;
+    }
+  
+    #sidebar_btn{
+      display: none;
+    }
+  
+    .content{
+      margin-left: 0;
+      margin-top: 0;
+      padding: 10px 20px;
+      transition: 0s;
+    }
+  
+    #check:checked ~ .content{
+      margin-left: 0;
+    }
+  
+    .mobile_nav{
+        display: block;
+        width: calc(100% - 0%);
+      }
+  
+    .nav_bar{
+      background:#b4aee8 ;
+      width: (100% - 0px);
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+  
+    .nav_bar .mobile_profile_image{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  
+    .nav_bar .nav_btn{
+      color: #fff;
+      font-size: 22px;
+      cursor: pointer;
+      transition: 0.5s;
+      transition-property: color;
+    }
+  
+    .nav_bar .nav_btn:hover{
+      color: #7868e6;
+    }
+  
+    .mobile_nav_items{
+      background: #b4aee8;
+      display: none;
+    }
+  
+    .mobile_nav_items a{
+      color: #fff;
+      display: block;
+      text-align: center;
+      letter-spacing: 1px;
+      line-height: 60px;
+      text-decoration: none;
+      box-sizing: border-box;
+      transition: 0.5s;
+      transition-property: background;
+    }
+  
+    .mobile_nav_items a:hover{
+      background: #7868e6;
+    }
+  
+    .mobile_nav_items i{
+      padding-right: 10px;
+    }
+  
+    .active{
+      display: block;
+    }
+  }
+
+.profile-head h1{
+    color: #7868e6;
+}
+.profile-head h2{
+    color: #7868e6;
+}
+.profile-rating{
+    font-size: 15px;
+    color: #8a87f3;
+    margin-top: 1%;
+    
+}
+.proile-rating span{
+    color: #6964f7;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.col-md-6{
+    text-align: left;
+    color: #fff;
+    font-weight: 100;
+}
+
+.profile-tab label{
+    font-size: 22px;
+    font-weight: 300;
+    color: #b4aee8;
+}
+.profile-tab p{
+    font-weight: 200;
+    color: #fff;
+}
+
+.text {
+    color: #7868e6;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    color: #7868e6;
+    font-size: 12px;
+    table-layout: auto;
+    width: 180px;
+}
+
+.table thead th,
+.table td,
+.table th {
+    border: none;
+    overflow: auto;
+    width: 180px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #b8b5ff;
+    color: mintcream;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #b8b5ff;
+  }
+
+@media(min-width:768px) and (max-width: 991px) {
+    .wrapper {
+        margin: auto;
+    }
+
+    .navbar-nav:last-child {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        width: 100%
+    }
+}
+
+@media(min-width: 300px) and (max-width: 767px) {
+    .wrapper {
+        margin: auto
+    }
+
+    .navbar-nav:last-child {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        width: 100%
+    }
+
+    #income {
+        border: none
+    }
+}
+
+@media(max-width: 400px) {
+    .wrapper {
+        padding: 10px 15px;
+        margin: auto
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 10px
+    }
+
+    .nav.nav-tabs .nav-link {
+        padding: 10px
+    }
+}

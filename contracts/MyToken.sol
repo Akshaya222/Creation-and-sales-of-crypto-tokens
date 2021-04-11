@@ -6,8 +6,8 @@ contract MyToken{
     //initialize inside constructor, constructor runs only once when the smart contract is deployed
     //read the number the tokens
     uint noTokens;
-    string public name="MyToken";
-    string public symbol="MT";
+    string public name="BIT QUEEN";
+    string public symbol="BTQ";
     string public standard="MyToken New";
 
     event Transfer(

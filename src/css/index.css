@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/scott-webb-OxHPDs4WV8Y-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+  }
+  body .token-sale-dets {
+    font-family: roboto, sans-serif;
+    display: flex;
+    width: 100%;
+    background: #444;
+    color: #fff;
+    align-items: center;
+  }
+  body .token-sale-dets strong {
+    color: #55ff63;
+  }
+  body .token-sale-dets .left {
+    width: 70%;
+    line-height: 30px;
+    padding: 30px;
+  }
+  body .token-sale-dets .left .big-data {
+    display: flex;
+    align-items: center;
+    line-height: 15px;
+    background: #fff url("https://swachhcoin.com/img/pattern.png");
+    margin: 30px 0;
+    color: #444;
+  }
+  body .token-sale-dets .left .big-data .capp {
+    width: 25%;
+    padding: 16px;
+  }
+  body .token-sale-dets .left .big-data .h-cap {
+    color: #0de358;
+  }
+  body .token-sale-dets .left .big-data .s-cap {
+    color: #18a973;
+  }
+  body .token-sale-dets .left .big-data .p-cap {
+    color: #18a9a9;
+  }
+  body .token-sale-dets .left .big-data .c-cap {
+    color: #187fa9;
+  }
+  body .token-sale-dets .left .big-data h3,
+  body .token-sale-dets .left .big-data p {
+    margin: 0;
+  }
+  body .token-sale-dets .left .big-data p {
+    font-size: 2rem;
+    padding-top: 20px;
+  }
+  body .token-sale-dets .left .big-data h3 {
+    font-size: 0.9rem;
+  }
+  body .token-sale-dets .left i {
+    color: #f76969;
+    font-size: 3rem;
+  }
+  body .token-sale-dets .left a[href="token-pdf.pdf"] {
+    font-size: 2.2rem;
+    color: #95989a;
+    padding: 0px;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+    margin: 5px;
+    line-height: 70px;
+  }
+  body .token-sale-dets .left .purchase-methods {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .token-sale-dets .left .purchase-methods .currencies-dets {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.471);
+    overflow: hidden;
+    background: #fff;
+  }
+  body .token-sale-dets .left .purchase-methods .currencies-dets:hover {
+    transform: scale(1.1);
+  }
+  body .token-sale-dets .left .purchase-methods .currencies-dets img {
+    height: 100%;
+  }
+  body .token-sale-dets .right {
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    background: #55ff63 url("https://swachhcoin.com/img/pattern.png");
+    box-shadow: -3px 3px 5px rgba(0,0,0,0.471);
+  }
+  body .token-sale-dets .right h2 {
+    width: 80%;
+    font-size: 3rem;
+    padding: 0 30px 100px 30px;
+    margin: 0;
+    color: #444;
+    margin-top: 20px;
+  }
+  body .token-sale-dets .right form {
+    width: 80%;
+  }
+  body .token-sale-dets .right input {
+    width: 100%;
+    height: 50px;
+    background: no-repeat;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #444;
+    margin: 10px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: #444;
+    font-family: roboto;
+    transition: 0.3s;
+  }
+  body .token-sale-dets .right input:focus {
+    border-bottom: 5px solid #fff;
+  }
+  body .token-sale-dets .right button {
+    width: 100%;
+    margin: 10px 10px 30px 10px;
+    height: 60px;
+    font-size: 2rem;
+    background: #444;
+    border: none;
+    font-family: roboto;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 5px #444;
+    color: #fff;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+  }
+  body .token-sale-dets .right button:hover {
+    transform: scale(1.05);
+  }
+
+
+  .timer{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .time{
+      display: flex;
+      flex-direction: column;
+      margin:0px 9px;
+      align-items: center;
+  }
+
+  .timeText{
+    font-size: 53px;
+    color: #fff;
+  }
+
+  .timerBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+    margin-right: -50px;
+    background-color: #7868e6;
+    padding: 25px 15px;
+    box-shadow: 0px 0px 20px #3e30d9;
+  }
+
+  .tokenDetails{
+    margin-left: 30px;
+  }
+  .tokenDetailsBox{
+    margin-top: 50px;
+    margin-left: 40px;
+  }
+  .tokenDetailsBox h1{
+    font-size: 50px;
+  }
+  .timer-btn, .timer-btn:hover,.timer-btn:active{
+    color: #000000;
+    background-color: #ffffff;
+  }
+  .detail{
+    font-size: 18px;
+  }
+  .dashboard-btn{
+      background-color: #7868e6;
+  }
+  .dashboard-btn:hover,.dashboard-btn:active{
+    background-color: #7868e6;
+  }

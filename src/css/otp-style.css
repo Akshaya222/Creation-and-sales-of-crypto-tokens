@@ -1,0 +1,144 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    background: url("../img/scott-webb-OxHPDs4WV8Y-unsplash.jpg");
+    background-size: cover;
+}
+
+.reset-box {
+    margin-top: 75px;
+    height: auto;
+    background: white;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.reset-key {
+    height: 100px;
+    font-size: 80px;
+    line-height: 100px;
+    background: -webkit-linear-gradient(#7868e6, #b4aee8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.reset-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #7868e6;
+}
+
+.reset-form {
+    margin-top: 25px;
+    text-align: left;
+}
+
+input[type=text] {
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid #7868e6;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: #7868e6;
+}
+
+input[type=password] {
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid #7868e6;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color: black ;
+}
+
+.form-group {
+    margin-bottom: 40px;
+    outline: 0px;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #7868e6;
+    outline: 0;
+    background-color: white;
+    color: #7868e6;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.form-control-label {
+    font-size: small;
+    color: #6C6C6C;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-outline-light {
+    border-color: #7868e6;
+    color: #7868e6;
+    border-radius: 0px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-outline-light:hover {
+    background-color: #b4aee8;
+    right: 0px;
+    color: white;
+}
+
+.reset-btm {
+
+    text-align: center;
+    margin: auto;
+}
+
+.reset-button {
+    padding-right: 0px;
+    /* text-align: left; */
+    margin-bottom: 25px;
+    
+}
+.left{
+    float: left;
+    margin-right: 30px;
+}
+.right{
+    margin-left: 10px;
+}
+
+.reset-text {
+    text-align: left;
+    padding-left: 0px;
+    color: #ccc;
+}
+
+.resetbttm {
+    padding: 0px;
+}
+.fa-eye-slash{
+    color: #7868e6;
+}
+.fa-eye{
+    color: #b4aee8;
+}
