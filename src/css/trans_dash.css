@@ -5,16 +5,17 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
+    background: #342f38;
 }
 
   header{
     z-index: 1;
     position: fixed;
     background: #342f38;
-    padding: 20px;
+    /* padding: 20px; */
     width: calc(100% - 0%);
     top: 0;
-    height: 30px;
+    /* height: 30px; */
   }
   
   .left_area h3{
@@ -23,6 +24,8 @@ body{
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 500;
+    padding-bottom: 1%;
+  padding-left: 1%;
   }
   
   .left_area span{
@@ -30,7 +33,7 @@ body{
   }
   
   .logout_btn{
-    padding: 5px;
+    /* padding: 5px;
     background: #b4aee8;
     text-decoration: none;
     float: right;
@@ -41,7 +44,11 @@ body{
     font-weight: 300;
     color: #fff;
     transition: 0.5s;
-    transition-property: background;
+    transition-property: background; */
+    background-color: #b4aee8 ;
+  float: right;
+  margin-top: -40px;
+  margin-right: 40px;
   }
   
   .logout_btn:hover{
@@ -114,7 +121,7 @@ body{
     position: fixed;
     cursor: pointer;
     left: 300px;
-    font-size: 20px;
+    font-size: x-large;
     margin: 5px 0;
     transition: 0.5s;
     transition-property: color;
@@ -165,13 +172,17 @@ body{
   .mobile_nav{
     display: none;
   }
-  
+  .card{
+    background-color: #342f38 !important;
+    border: 0px !important;
+  }
   .content .card p{
     padding: 15px;
     margin-bottom: 15px;
     font-size: 14px;
     opacity: 1;
   }
+  
   
   .content .card a{
     color: #b4aee8;
@@ -268,23 +279,16 @@ body{
 
 .profile-head h1{
     color: #7868e6;
+    font-size: xx-large;
 }
-.profile-head h2{
-    color: #7868e6;
-}
-.profile-rating{
-    font-size: 15px;
-    color: #8a87f3;
-    margin-top: 1%;
-    
-}
-.proile-rating span{
-    color: #6964f7;
-    font-size: 15px;
-    font-weight: 600;
+h2{
+  color: #b4aee8;
+  font-weight: lighter;
+  font-size: xx-large;
 }
 
-.col-md-6{
+
+.col-md-4{
     text-align: left;
     color: #fff;
     font-weight: 100;
@@ -301,41 +305,42 @@ body{
 }
 
 .text {
-    color: #7868e6;
+  color: #7868e6;
 }
 
 .table thead th {
-    text-transform: uppercase;
-    color: #7868e6;
-    font-size: 12px;
-    table-layout: auto;
-    width: 180px;
+  text-transform: uppercase;
+  color: #7868e6;
+  font-size: 12px;
+  table-layout: auto;
+  width: 180px;
 }
 
 .table thead th,
 .table td,
 .table th {
-    border: none;
-    overflow: auto;
-    width: 180px;
-    text-align: center;
+  border: none;
+  overflow: auto;
+  width: 180px;
+  text-align: center;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #b8b5ff;
-    color: mintcream;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #b8b5ff;
-  }
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #b8b5ff;
+  color: mintcream;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #7868e6;
+}
+
 
 @media(min-width:768px) and (max-width: 991px) {
     .wrapper {
@@ -367,6 +372,8 @@ table {
     }
 }
 
+
+
 @media(max-width: 400px) {
     .wrapper {
         padding: 10px 15px;
@@ -381,4 +388,22 @@ table {
     .nav.nav-tabs .nav-link {
         padding: 10px
     }
+}
+hr{
+  border: 1px solid #fff;
+  color: #fff;
+}
+.row  label{
+  color: #b4aee8;
+  font-size: x-large;
+}
+.desc{
+  color: #b4aee8;
+  font-size: larger !important;
+}
+
+.coin-info{
+  padding-top: 1%;
+  font-size: larger;
+  color: #b4aee8;
 }
