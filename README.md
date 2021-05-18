@@ -1,1 +1,1 @@
-# Creation-and-sales-of-cryptocurrency
+# Creation-and-sales-of-crypto-tokens
